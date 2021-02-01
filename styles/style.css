@@ -276,7 +276,7 @@ body {
   }
 
   .wrapper {
-    margin: 8em auto;
+    margin: 0em auto 6em auto;
     grid-auto-flow: column;
     grid-gap: 3em;
     justify-content: space-between;
@@ -320,14 +320,14 @@ body {
 
   .purple-bg {
     width: 35%;
-    min-height: 870px;
+    min-height: 740px;
     border-radius: 0 0 50% 50%;
     margin-left: -166px;
   }
 
   .skin-bg {
     width:50%;
-    min-height: 880px;
+    min-height: 680px;
     margin-right: -370px;
   }
 }
