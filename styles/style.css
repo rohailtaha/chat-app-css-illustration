@@ -1,0 +1,336 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Family: [Rubik] */
+
+:root {
+  font-size: 62.5%;
+  --lightMagenta: hsl(293, 100%, 63%);
+  --lightViolet: hsl(264, 100%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --grayish-violet: hsl(270, 20%, 96%);
+}
+
+body {
+  font-family: Rubik;
+  font-size: 1.6rem;
+  background-color: var(--grayish-violet);
+  position: relative;
+}
+
+.wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 4em;
+  justify-items: center;
+}
+
+.purple-bg {
+  width: 50%;
+  min-height: 600px;
+  position: absolute;
+  border-radius: 0 0 95% 0;
+  background-image: linear-gradient( hsl(264, 100%, 68%), var(--lightViolet));
+  z-index: -1;
+  top: 0
+}
+.skin-bg {
+  width:55%;
+  min-height: 440px;
+  position: absolute;
+  border-radius: 90% 0 0 0;
+  background-color: hsla(0, 18%, 89%, 0.281);
+  z-index: -1;
+  right: 0;
+  bottom:0
+}
+
+/*****************************************
+  Styling The Main Heading And Paragraph
+******************************************/
+
+.main-content {
+  text-align: center;
+  max-width: 375px;
+}
+
+.main-heading {
+  color: hsl(271, 36%, 24%);
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 0.8em;
+}
+
+.main-para {
+  color: hsl(270, 7%, 64%);
+  line-height: 2.6rem;
+  padding: 0 2.2em;
+}
+
+/*****************************
+  Styling The Chat App View
+******************************/
+
+.chat-app-view-wrapper {
+  margin-top: 3em;
+  width: 80%;
+  max-width: 310px;
+  padding: 0.8em;
+  background-color: var(--white);
+  border-radius: 2.5em;
+  box-shadow: 1px 40px 30px 0px hsl(0, 0%, 83%);
+}
+
+.chat-app-view {
+  background-color: var(--grayish-violet);
+  border-radius: 1.5em;
+}
+
+.header {
+  background-image: linear-gradient(
+    to right,
+    var(--lightViolet),
+    var(--lightMagenta)
+  );
+  border-radius: 1.5em 1.5em 0.5em 0.5em;
+  color: var(--white);
+  padding: 0 1em 1em 1em;
+}
+
+.center-cut {
+  width: 75%;
+  height: 20px;
+  grid-column: 1/-1;
+  margin: 0 auto 0.7em auto;
+  border-radius: 0 0 1.2em 1.2em;
+  background-color: var(--white);
+}
+
+.header-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto auto auto 1fr;
+  align-items: center;
+  justify-items: left;
+  grid-gap: 0.6em;
+}
+
+.left-arrow {
+  font-weight: 700;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50% 50%;
+  border: 2px solid var(--white);
+}
+
+.name {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.desc {
+  color: hsl(276, 100%, 81%);
+  font-size: 1rem;
+  margin-top: 0.2em;
+}
+
+.dots {
+  justify-self: right;
+}
+
+.chats {
+  padding: 0.5em;
+}
+
+.dog-images {
+  margin: 1.4em 0 -4px auto;
+  width: fit-content;
+}
+
+.dog-img {
+  border-radius: 0.8em;
+  width: 54px;
+  height: 50px;
+  margin-left: 0.5em;
+}
+
+.chat {
+  line-height: 1.6rem;
+  font-size: 1.1rem;
+  padding: 0.6em 1em;
+  margin: 0.8em 0;
+}
+
+.left-chat {
+  color: hsl(276, 55%, 52%);
+  background-color: hsla(0, 0%, 87%, 0.671);
+  border-radius: 1.2em 1.2em 1.2em 0.5em;
+  width: 65%;
+}
+
+.right-chat {
+  color: hsl(271, 15%, 43%);
+  background-color: var(--white);
+  border-radius: 1.2em 1.2em 0.5em 1.2em;
+  width: 65%;
+  margin: 0.8em 0 0.8em auto;
+  box-shadow: 0px 3px 5px 0px hsl(0, 1%, 86%);
+}
+
+.smallest-chat {
+  width: 45%;
+  margin-bottom: 2.2em;
+}
+
+.duration-and-cost {
+  background-image: linear-gradient(
+    to right,
+    var(--lightMagenta),
+    var(--lightViolet)
+  );
+  border-radius: 0.8em 0.8em 0.8em 0.4em;
+  padding: 0.5em 1em 0.5em 0;
+  color: var(--white);
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 0.8em;
+  justify-items: center;
+  align-items: center;
+  width: 80%;
+  margin: 0.5em 0 0.5em 0em;
+}
+
+.duration {
+  font-size: 1rem;
+  margin-left: -10px;
+  justify-self: left;
+  color: hsl(289, 100%, 90%);
+}
+
+.radio-btn {
+  width: 15px;
+  height: 15px;
+  border-radius: 50% 50%;
+  border: 0.5px solid hsl(289, 100%, 72%);
+  background-color: transparent;
+}
+
+.cost {
+  font-size: 2rem;
+  margin: 0 0 0 auto;
+  font-weight: 700;
+}
+
+.action {
+  position: relative;
+  margin-top: 1.2em;
+}
+
+.message {
+  padding: 0.8em;
+  border-radius: 1.5em 1.5em 1.5em 1.5em;
+  border: none;
+  width: 100%;
+  margin-bottom: 0.6em;
+}
+
+.message::placeholder {
+  color: hsl(206, 6%, 79%);
+  font-size: 1.1rem;
+}
+
+.forward-arrow {
+  color: white;
+  font-weight: 700;
+  padding: 0.3em 0.6em;
+  background-color: hsl(271, 36%, 24%);
+  border-radius: 50% 50%;
+  position: absolute;
+  top: 2px;
+  right: 10px;
+}
+
+
+
+/**********************
+  Screen Size 720PX
+**********************/
+
+@media(min-width:720px) {
+  body{
+    padding-top: 0.05em;
+  }
+
+  .wrapper {
+    margin: 8em auto;
+    grid-auto-flow: column;
+    grid-gap: 3em;
+    justify-content: space-between;
+    justify-items: initial;
+    align-items: center;
+    padding: 2em;
+  }
+
+  .main-content {
+    text-align: left;
+    max-width: 450px;
+  }
+  
+  .main-para {
+    padding: 0;
+    line-height: 3rem;
+  }
+
+  .chat-app-view-wrapper {
+    width: 100%;
+  }
+
+  .purple-bg {
+    width: 25%;
+  }
+
+  .skin-bg {
+    width:40%;
+    min-height: 700px;
+    border-radius: 50% 0 0 0;
+    margin-right: -140px;
+  }
+  
+}
+
+/**********************
+  Screen Size 1100PX
+**********************/
+
+@media(min-width:1100px) {
+
+  .purple-bg {
+    width: 35%;
+    min-height: 870px;
+    border-radius: 0 0 50% 50%;
+    margin-left: -166px;
+  }
+
+  .skin-bg {
+    width:50%;
+    min-height: 880px;
+    margin-right: -370px;
+  }
+}
+
+
+
