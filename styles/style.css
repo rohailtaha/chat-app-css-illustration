@@ -6,7 +6,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -26,6 +27,10 @@ body {
   font-size: 1.6rem;
   background-color: var(--grayish-violet);
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
@@ -37,23 +42,24 @@ body {
 }
 
 .purple-bg {
-  width: 50%;
-  min-height: 600px;
+  width: 60%;
+  min-height: 50%;
   position: absolute;
-  border-radius: 0 0 95% 0;
-  background-image: linear-gradient( hsl(264, 100%, 68%), var(--lightViolet));
+  border-radius: 0 0 50% 50%;
+  background-image: linear-gradient(hsl(264, 100%, 68%), var(--lightViolet));
   z-index: -1;
-  top: 0
+  top: 0;
+  left: -10%;
 }
 .skin-bg {
-  width:55%;
+  width: 60%;
   min-height: 440px;
   position: absolute;
-  border-radius: 90% 0 0 0;
+  border-radius: 50% 50% 0 0;
   background-color: hsla(0, 18%, 89%, 0.281);
   z-index: -1;
-  right: 0;
-  bottom:0
+  right: -10%;
+  bottom: 0;
 }
 
 /*****************************************
@@ -63,6 +69,7 @@ body {
 .main-content {
   text-align: center;
   max-width: 375px;
+  margin-bottom: 2em;
 }
 
 .main-heading {
@@ -84,12 +91,12 @@ body {
 
 .chat-app-view-wrapper {
   margin-top: 3em;
-  width: 80%;
   max-width: 310px;
+  min-width: 310px;
   padding: 0.8em;
   background-color: var(--white);
   border-radius: 2.5em;
-  box-shadow: 1px 40px 30px 0px hsl(0, 0%, 83%);
+  box-shadow: 12px 10px 30px 0px rgb(189 189 189);
 }
 
 .chat-app-view {
@@ -260,18 +267,16 @@ body {
   background-color: hsl(271, 36%, 24%);
   border-radius: 50% 50%;
   position: absolute;
-  top: 2px;
+  top: 3px;
   right: 10px;
 }
-
-
 
 /**********************
   Screen Size 720PX
 **********************/
 
-@media(min-width:720px) {
-  body{
+@media (min-width: 720px) {
+  body {
     padding-top: 0.05em;
   }
 
@@ -289,48 +294,28 @@ body {
     text-align: left;
     max-width: 450px;
   }
-  
+
   .main-para {
     padding: 0;
     line-height: 3rem;
   }
 
-  .chat-app-view-wrapper {
-    width: 100%;
-  }
-
   .purple-bg {
-    width: 25%;
+    left: -35%;
   }
 
   .skin-bg {
-    width:40%;
-    min-height: 700px;
-    border-radius: 50% 0 0 0;
-    margin-right: -140px;
+    min-height: 50%;
+    right: -35%;
   }
-  
 }
 
 /**********************
   Screen Size 1100PX
 **********************/
 
-@media(min-width:1100px) {
-
-  .purple-bg {
-    width: 35%;
-    min-height: 740px;
-    border-radius: 0 0 50% 50%;
-    margin-left: -166px;
-  }
-
-  .skin-bg {
-    width:50%;
-    min-height: 680px;
-    margin-right: -370px;
+@media (min-width: 1100px) {
+  .wrapper {
+    grid-gap: 5em;
   }
 }
-
-
-
